@@ -6,6 +6,10 @@ const config = require("config");
 const auth = require("../middleware/auth");
 const { check, validationResult } = require("express-validator");
 
+const cors = require("cors");
+
+router.use(cors());
+
 const User = require("../models/Users");
 
 //@route    GET api/auth
